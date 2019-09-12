@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: wallet-local-server
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/walletdb
+    username: root
+    password: password
+    jpa:
+      hibernate.ddl-auto: update
+      generate-ddl: true
+      show-sql: true
+
+
+grpc:
+  server:
+    port: 9898

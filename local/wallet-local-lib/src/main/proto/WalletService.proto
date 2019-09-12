@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.wallet.local.lib;
+
+enum Currency {
+    EUR = 0;
+    USD = 1;
+    GBP = 2;
+}
+
+message TransferRequest {
+    int64 userId = 1;
+    float amount = 2;
+    Currency currency = 3;
+
+}
+
+message BalanceRequest {
+    int64 userId = 1;
+}
+
+message TransferResponse {}
+
+message BalanceResponse {
+    map<string, float> balance = 1;
+}
+
+service WalletService {
+    rpc deposit(TransferRequest) returns (TransferResponse);
+    rpc withdraw(TransferRequest) returns (TransferResponse);
+    rpc balance(BalanceRequest) returns (BalanceResponse);
+}
