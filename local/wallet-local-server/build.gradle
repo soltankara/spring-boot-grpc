@@ -17,8 +17,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework:spring-web:5.1.9.RELEASE'
-    testCompile 'com.h2database:h2'
     implementation 'org.projectlombok:lombok:1.18.2'
     implementation 'mysql:mysql-connector-java:8.0.14'
     implementation 'net.devh:grpc-server-spring-boot-starter:2.5.1.RELEASE'
+
+    testCompile 'com.h2database:h2'
+    testCompile 'io.cucumber:cucumber-java:4.7.0'
+    testCompile 'io.cucumber:cucumber-junit:4.7.0'
+    testCompile 'io.cucumber:cucumber-spring:4.7.0'
 }
