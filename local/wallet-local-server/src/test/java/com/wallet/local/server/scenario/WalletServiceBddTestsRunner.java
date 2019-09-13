@@ -6,5 +6,5 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/feature/Wallet.feature")
-public class WalletServiceBddTest {
+public class WalletServiceBddTestsRunner {
 }
